@@ -1,0 +1,17 @@
+static int pickingNumbers(int []a){
+int n=0;
+Arrays.sort(a);
+int count=0;
+int max=0;
+for(int i=0;i<n;i++){
+for(int j=i;j<n;j++){
+if(a[j]-a[i]<=1){
+count++;
+}
+}
+if(count>max)
+max=count;
+count=0;
+}
+return max;
+}
